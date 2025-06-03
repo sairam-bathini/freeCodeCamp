@@ -1,4 +1,4 @@
-FROM 	node:22.16.0-bookworm-slim AS builder
+FROM node:22.16.0-alpine3.22 AS builder
 RUN apt-get update && apt-get install -y jq
 # global installs need root permissions, so have to happen before we switch to
 # the node user
